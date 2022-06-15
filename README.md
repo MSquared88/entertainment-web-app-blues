@@ -117,8 +117,8 @@ Prior to your first deployment, you'll need to do a few things:
 - Add a `SESSION_SECRET` to your fly app secrets, to do this you can run the following commands:
 
   ```sh
-  flyctl secrets set SESSION_SECRET=0dKcaBoM8PFxNEDzKv4M --app entertainment-web-app-blues-5ee5
-  flyctl secrets set SESSION_SECRET=0dKcaBoM8PFxNEDzKv4M --app entertainment-web-app-blues-5ee5-staging
+  flyctl secrets set SESSION_SECRET=<yourSecret> --app entertainment-web-app-blues-5ee5
+  flyctl secrets set SESSION_SECRET=<yourSecret> --app entertainment-web-app-blues-5ee5-staging
   ```
 
   > **Note:** When creating the staging secret, you may get a warning from the Fly CLI that looks like this:
