@@ -1,19 +1,19 @@
 const { PrismaClient } = require("@prisma/client");
 const bcrypt = require("bcryptjs");
+const { getMedia } = require("./data");
 
 const prisma = new PrismaClient();
 
 async function seed() {
-  const email = "rachel@remix.run";
+  const email = "demo@demo.com";
 
   // cleanup the existing database
-  await prisma.user.delete({ where: { email } }).catch(() => {
-    // no worries if it doesn't exist yet
-  });
+  await prisma.user.deleteMany({});
+  await prisma.media.deleteMany({});
 
-  const hashedPassword = await bcrypt.hash("racheliscool", 10);
+  const hashedPassword = await bcrypt.hash("password123", 10);
 
-  const user = await prisma.user.create({
+  await prisma.user.create({
     data: {
       email,
       password: {
@@ -24,25 +24,24 @@ async function seed() {
     },
   });
 
-  await prisma.note.create({
-    data: {
-      title: "My first note",
-      body: "Hello, world!",
-      userId: user.id,
-    },
-  });
-
-  await prisma.note.create({
-    data: {
-      title: "My second note",
-      body: "Hello, world!",
-      userId: user.id,
-    },
-  });
-
+  await Promise.all(
+    getMedia().map((media) => {
+      const data = {
+        title: media.title,
+        year: media.year.toString(),
+        category: media.category,
+        rating: media.rating,
+        isTrending: media.isTrending,
+        smallThumbnail: media.thumbnail.regular.small,
+        mediumThumbnail: media.thumbnail.regular.medium,
+        largeThumbnail: media.thumbnail.regular.large,
+        trendingThumbnail: media.thumbnail.trending?.large,
+      };
+      return prisma.media.create({ data });
+    })
+  );
   console.log(`Database has been seeded. 🌱`);
 }
-
 seed()
   .catch((e) => {
     console.error(e);
