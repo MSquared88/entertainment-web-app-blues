@@ -8,9 +8,8 @@ async function seed() {
   const email = "demo@demo.com";
 
   // cleanup the existing database
-  await prisma.user.delete({ where: { email } }).catch(() => {
-    // no worries if it doesn't exist yet
-  });
+  await prisma.user.deleteMany({});
+  await prisma.media.deleteMany({});
 
   const hashedPassword = await bcrypt.hash("password123", 10);
 
@@ -24,7 +23,7 @@ async function seed() {
       },
     },
   });
-  await prisma.media.deleteMany({});
+
   await Promise.all(
     getMedia().map((media) => {
       const data = {
