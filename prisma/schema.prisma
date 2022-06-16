@@ -5,17 +5,17 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 model User {
   id    String @id @default(cuid())
   email String @unique
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  password Password?
-  notes    Note[]
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  password  Password?
+  bookMarks UserBookmarks[]
 }
 
 model Password {
@@ -25,14 +25,26 @@ model Password {
   userId String @unique
 }
 
-model Note {
-  id    String @id @default(cuid())
-  title String
-  body  String
+model Media {
+  id         String  @id @default(cuid())
+  title      String
+  year       String
+  rating     String
+  category   String
+  trendingThumbnail String?
+  isTrending Boolean
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  smallThumbnail  String
+  mediumThumbnail String
+  largeThumbnail  String
+  userIds         UserBookmarks[]
+}
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String
+model UserBookmarks {
+  user    User   @relation(fields: [userId], references: [id])
+  userId  String
+  media   Media  @relation(fields: [mediaId], references: [id])
+  mediaId String
+
+  @@id([userId, mediaId])
 }

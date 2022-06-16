@@ -33,6 +33,7 @@
     "/public/build"
   ],
   "dependencies": {
+    "@headlessui/react": "^1.6.4",
     "@prisma/client": "^3.15.0",
     "@remix-run/express": "^1.6.0",
     "@remix-run/node": "^1.6.0",
@@ -42,9 +43,11 @@
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.18.1",
+    "framer-motion": "^6.3.11",
     "morgan": "^1.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "tailwind-scrollbar": "^1.3.1",
     "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
