@@ -8,14 +8,14 @@ export default function Index() {
     <main className="relative min-h-screen bg-blue-dark sm:flex sm:items-center sm:justify-center">
       <div className="relative sm:pb-16 sm:pt-8">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
+          <div className="relative shadow-xl shadow-black sm:overflow-hidden sm:rounded-2xl">
             <div className="absolute inset-0">
-              {/* <img
+              <img
                 className="h-full w-full object-cover"
-                src="/assets/icon-play.svg"
+                src="/assets/hero-image.jpg"
                 alt="Sonic Youth On Stage"
-              /> */}
-              <div className="absolute inset-0 bg-[color:rgba(254,204,27,0.5)] mix-blend-multiply" />
+              />
+              <div className="absolute inset-0 bg-[color:rgba(16,20,30,0.6)] mix-blend-multiply" />
             </div>
             <div className="lg:pb-18 relative px-4 pt-16 pb-8 sm:px-6 sm:pt-24 sm:pb-14 lg:px-8 lg:pt-32">
               <h1 className="text-center text-6xl font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
@@ -45,26 +45,19 @@ export default function Index() {
                   <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                     <Link
                       to="/join"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-blue-grayish px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-400 hover:text-black sm:px-8"
+                      className="flex items-center justify-center rounded-md border border-transparent bg-blue-grayish px-4 py-3 text-base font-medium text-white shadow-lg shadow-sm hover:bg-gray-400 hover:text-black sm:px-8"
                     >
                       Sign up
                     </Link>
                     <Link
                       to="/login"
-                      className="flex items-center justify-center rounded-md bg-red px-4 py-3 font-medium text-white hover:bg-white hover:text-black  "
+                      className="flex items-center justify-center rounded-md bg-red px-4 py-3 font-medium text-white shadow-xl hover:bg-white hover:text-black  "
                     >
                       Log In
                     </Link>
                   </div>
                 )}
               </div>
-              <a href="https://remix.run">
-                <img
-                  src="https://user-images.githubusercontent.com/1500684/158298926-e45dafff-3544-4b69-96d6-d3bcc33fc76a.svg"
-                  alt="Remix"
-                  className="mx-auto mt-16 w-full max-w-[12rem] md:max-w-[16rem]"
-                />
-              </a>
             </div>
           </div>
         </div>
