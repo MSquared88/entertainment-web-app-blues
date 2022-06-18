@@ -1,12 +1,68 @@
+# Frontend Mentor - Entertainment web app solution
+
+This is a solution to the [Entertainment web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Project Details](#project-details)
+  - [Development](#development)
+  - [Deployment](#deployment)
+  - [Connecting to your database](#connecting-to-your-database)
+  - [Testing](#testing)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
+- Add/Remove bookmarks from all movies and TV series
+- Search for relevant shows on all pages
+- **Bonus**: Build this project as a full-stack application
+- **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
+
+### Screenshot
+
+![](./Entertainment-Web-App.png)
+
+### Links
+
+- Live Site URL: [entertainment-web-app](https://entertainment-web-app-blues-5ee5.fly.dev/)
+
+## My process
+
+### Built with
+
+- Mobile-first workflow
+- TypeScript
+- [Remix.js](https://nextjs.org/) - React Framework
+- [tailwindcss](https://tailwindcss.com/) - For Styling
+- [Framer Motion](https://www.framer.com/motion/) - For Animations
+- [Headless UI](https://headlessui.dev/) - For Modal and Menu components
+
+### What I learned
+
+I had never worked with Remix or TypeScript before so working with both was a challenge, but I learned
+so much about both and looked forward to using them in the future.
+
+## Author
+
+- Website - [Matthew Meeves](https://www.matthewmeeves.com/)
+
+- Linkedin - [Profile](https://www.linkedin.com/in/matthew-meeves/)
+
 # Remix Blues Stack
-
-![The Remix Blues Stack](https://repository-images.githubusercontent.com/461012689/37d5bd8b-fa9c-4ab0-893c-f0a199d5012d)
-
-Learn more about [Remix Stacks](https://remix.run/stacks).
-
-```
-npx create-remix --template remix-run/blues-stack
-```
 
 ## What's in the stack
 
@@ -64,18 +120,10 @@ This starts your app in development mode, rebuilding assets on file changes.
 
 The database seed script creates a new user with some data you can use to get started:
 
-- Email: `rachel@remix.run`
-- Password: `racheliscool`
+- Email: `demo@demo.com`
+- Password: `password123`
 
 If you'd prefer not to use Docker, you can also use Fly's Wireguard VPN to connect to a development database (or even your production database). You can find the instructions to set up Wireguard [here](https://fly.io/docs/reference/private-networking/#install-your-wireguard-app), and the instructions for creating a development database [here](https://fly.io/docs/reference/postgres/).
-
-### Relevant code:
-
-This is a pretty simple note-taking app, but it's a good example of how you can build a full stack app with Prisma and Remix. The main functionality is creating users, logging in and out, and creating and deleting notes.
-
-- creating users, and logging in and out [./app/models/user.server.ts](./app/models/user.server.ts)
-- user sessions, and verifying them [./app/session.server.ts](./app/session.server.ts)
-- creating, and deleting notes [./app/models/note.server.ts](./app/models/note.server.ts)
 
 ## Deployment
 
