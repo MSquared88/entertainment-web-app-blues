@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Entertainment-Web-App.png)
+![](./assets/Entertainment-Web-App.png)
 
 ### Links
 
