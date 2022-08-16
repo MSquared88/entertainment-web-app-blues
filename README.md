@@ -62,7 +62,7 @@ so much about both and looked forward to using them in the future.
 
 - Linkedin - [Profile](https://www.linkedin.com/in/matthew-meeves/)
 
-# Remix Blues Stack
+# Entertainment Web App Stack
 
 ## What's in the stack
 
