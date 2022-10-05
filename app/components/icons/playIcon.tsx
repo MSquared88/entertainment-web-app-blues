@@ -62,8 +62,16 @@ export default function PlayIcon() {
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-blue-semi p-6 text-left align-middle shadow-xl transition-all">
                   <div className="flex items-center justify-center bg-blue-semi text-white">
                     <h1 className="text-3xl">
-                      These are not actually videos. They are just here for
-                      show.
+                      This was a project from{" "}
+                      <a
+                        href="https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X"
+                        className="text-blue-500"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Frontend Mentor
+                      </a>
+                      . Follow link for more information.
                     </h1>
                   </div>
                 </Dialog.Panel>
